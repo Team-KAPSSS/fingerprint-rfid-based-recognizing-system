@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FINGERPRINT AND RFID BASED RECOGNIZING SYSTEM</title>
+  <style>
+    h1{
+        color: cyan;
+        text-align: center;
+        border: 1px solid black;
+        -webkit-text-stroke-width:0.8px;
+        -webkit-text-stroke-color:black;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    
+    .image-container {
+      height:fit-content;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .image {
+      width: 100%;
+      height: auto;
+      align-content: flex-end;
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .image:hover {
+      transform: scale(1.1);
+    }
+    
+    .image-description {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      padding: 10px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    .image-container:hover .image-description {
+      opacity: 1;
+    }
+    h5{
+      background-color: rgb(205, 205, 205);
+      text-align: center;
+      margin: auto;
+      height: 20px;
+      
+      
+    }
+  </style>
+</head>
+<body>
+    
+    <h1>Team KAPSSS</h1>
+
+  <div class="gallery">
+    <div class="image-container">
+      <img class="image" src="image1.jpg" alt="Image 1">
+      <div class="image-description">"Team work"</div>
+    </div>
+    
+    <div class="image-container">
+      <img class="image" src="image2.jpg" alt="Image 2">
+      <div class="image-description">Half build the project</div>
+    </div>
+    
+    <div class="image-container">
+      <img class="image" src="image3.jpg" alt="Image 3">
+      <div class="image-description">Project building complete</div>
+    </div>
+    
+    <!-- Add more image containers as needed -->
+  </div>
+  <h5>created by Suman Gorai</h5>
+  <script>
+    const images = document.querySelectorAll('.image');
+    
+    images.forEach(image => {
+      image.addEventListener('dblclick', () => {
+        image.classList.toggle('zoomed');
+      });
+    });
+  </script>
+</body>
+</html>
