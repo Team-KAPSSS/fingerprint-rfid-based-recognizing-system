@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FUTURE SCOPE</title>
+  <style>
+    body{
+        margin:0;
+        padding:0;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+    }
+    .logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo a{
+      text-decoration: none;
+      display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo img{
+        height: 160px;
+        width: 160px;
+        margin-top: 50px;
+      border: 2px solid lightgrey;
+      border-radius: 15px;
+    }
+    h1{
+        color: rgb(190, 190, 190);
+        text-align: center;
+        -webkit-text-stroke-width:0.8px;
+        -webkit-text-stroke-color:rgb(55, 55, 55);
+    }
+    .navbar{
+      height: 25px;
+      display: flex;
+      flex-direction: ;
+      justify-content: space-around;
+      margin-bottom: 15px;
+
+    }
+    .navbar div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 35px;
+      width: 22%;
+      font-size: 25px;
+      border-radius: 5px;
+      background-color: lightgray;
+    }
+    .navbar div:hover{
+      background-color: lightcoral;
+    }
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    a:hover{
+      color: blue;
+    }
+    .futurescope{
+      margin-top: 50px;
+    }
+    .futurescope h2{
+      text-align: center;
+
+    }
+    .futurescope div{
+      margin: 30px;
+      font-size: 18px;
+    }
+    .bottom{
+        width: 100%;
+    }
+    h5{
+      margin:0;
+      background-color: rgb(205, 205, 205);
+      text-align: center;
+      height: 40px;
+      font-size: 30px;
+    }
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.jpg" alt="" >
+      <h1>Team KAPSSS</h1>
+    </a>
+  </div>
+<div class="navbar">
+    <div><a href="about.html">About</a></div>
+    <div><a href="projectdetails.html">Project Details</a></div>
+    <div><a href="teammembers.html">Team Members</a></div>
+    <div style=" background-color: lightgreen;"><a href="futurescope.html">Future Scope</a></div>
+</div>
+</header>
+<div class="futurescope">
+    <h2>Future Scope</h2>
+    <div>
+        <p>
+          In future, we would like to keep working on this project and make new additions to provide
+          users with more advanced features and more detailed information. We have set our sights
+          on the following additions in future-
+        </p>
+          <ul>
+              <li>We would like to add some high functional sensory on this system to make it more
+                faster and more accurate.</li>  
+              <li>We have a plan to make a database to store the fingerprint templates and the
+                corresponding RFID UIDs to make it more smooth and dynamic for the users.</li>  
+              <li>Beside this we also have a plan to change the microcontroller unit with an advance
+                computing unit which supports the Wi-Fi and other subordinate connections.</li>  
+              <li>We also have a plan to make an web page where the users can show their data
+                easily.</li>
+        </ul>
+    
+    </div>
+</div>
+
+<footer class="bottom">
+<h5>created by Suman Gorai</h5>
+</footer>
+  <script>
+    const images = document.querySelectorAll('.image');
+    
+    images.forEach(image => {
+      image.addEventListener('dblclick', () => {
+        image.classList.toggle('zoomed');
+      });
+    });
+    document.addEventListener('contextmenu', event=> event.preventDefault()); 
+      document.onkeydown = function(e) { 
+      if(event.keyCode == 123) { 
+      return false; 
+      } 
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.keyCode == 'P'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+      return false; 
+      } 
+      } 
+  </script>
+</body>
+</html>

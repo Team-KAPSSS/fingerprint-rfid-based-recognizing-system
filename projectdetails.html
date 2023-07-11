@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PROJECT DETAILS</title>
+  <style>
+    body{
+      margin:0;
+        padding:0;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+    }
+    .logo{
+      margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo a{
+      text-decoration: none;
+      display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo img{
+        height: 160px;
+        width: 160px;
+        margin: 0px;
+      border: 2px solid lightgrey;
+      border-radius: 15px;
+    }
+    h1{
+        color: rgb(190, 190, 190);
+        text-align: center;
+        -webkit-text-stroke-width:0.8px;
+        -webkit-text-stroke-color:rgb(55, 55, 55);
+    }
+    .navbar{
+      height: 25px;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 15px;
+
+    }
+    .navbar div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 35px;
+      width: 22%;
+      font-size: 25px;
+      border-radius: 5px;
+      background-color: lightgray;
+    }
+    .navbar div:hover{
+      background-color: lightcoral;
+    }
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    a:hover{
+      color: blue;
+    }
+
+    .projectdetails{
+      margin-top: 30px;
+    }
+    .projectdetails h2{
+        text-align: center;
+    }
+    .data{
+      padding: 20px;
+      font-size: 20px;
+    }
+    .bottom{
+        width: 100%;
+    }
+    h5{
+      margin:0;
+      background-color: rgb(205, 205, 205);
+      text-align: center;
+      height: 40px;
+      font-size: 30px;
+    }
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.jpg" alt="" >
+      <h1>Team KAPSSS</h1>
+    </a>
+  </div>
+<div class="navbar">
+    <div><a href="about.html">About</a></div>
+    <div style=" background-color: lightgreen;"><a href="projectdetails.html">Project Details</a></div>
+    <div><a href="teammembers.html">Team Members</a></div>
+    <div><a href="futurescope.html">Future Scope</a></div>
+</div>
+</header>
+
+<div class="projectdetails">
+<h2>
+  Fingerprint & RFID Based Recognizer System
+</h2>
+<div class="data">
+<p>
+  The Fingerprint and RFID-based Recognizer System is an innovative project that aims to
+  enhance security and access control in various domains, such as buildings, organizations,
+  and personal devices. By combining the unique identification capabilities of both fingerprint
+  biometrics and Radio Frequency Identification (RFID) technology, this system provides a
+  robust and reliable method for identifying and granting access to authorized individuals.
+  </p>
+  <p>
+  First, the system captures an individual's fingerprint using a dedicated fingerprint scanner or
+  sensor. This fingerprint image is then processed and converted into a unique digital
+  representation, known as a fingerprint template. The template is securely stored in a
+  database for future comparisons. Simultaneously, the system reads the RFID tag carried by
+  the individual and retrieves its unique identifier. The obtained identifier is also stored in the
+  system's memory, along with the corresponding fingerprint template.
+</p>
+<p>
+  When a person attempts to gain access to a restricted area or device, they need to place
+  their finger on the fingerprint scanner and present their RFID tag to the reader
+  simultaneously. The system matches the live fingerprint captured from the scanner with the
+  stored fingerprint template associated with the presented RFID tag. If the fingerprint
+  template and RFID identifier match, access is granted; otherwise, access is denied.
+</p>
+<p>
+  This significantly enhances security and reduces the risk of unauthorized access. Secondly,
+  the contactless nature of RFID technology enables swift and efficient identification,
+  minimizing queues or delays at access points.
+</p>
+<p>
+  The Fingerprint and RFID-based Recognizing System finds applications in a wide range of
+  scenarios, including secure access to buildings, rooms, and data centers, as well as
+  personal devices like smartphones and laptops. It can also be employed in areas requiring
+  strict authentication, such as airports, government facilities, and financial institutions.
+</p>
+<p>
+  Overall, the Fingerprint and RFID-based Recognizing System offers a powerful and
+  sophisticated solution for identification and access control, combining the strengths of
+  fingerprint biometrics and RFID technology.
+</p>
+<center>
+  <p>to download the project report,<a href="https://drive.google.com/file/d/1-owN-6Mg9Sx86Bi-ZHSThnGAinvTIrSV/view?usp=drivesdk" style="text-decoration: underline;color: blue;">click here</a></p>
+
+</center>
+</div> 
+</div>
+
+<footer class="bottom">
+<h5>created by Suman Gorai</h5>
+</footer>
+
+  <script>
+    const images = document.querySelectorAll('.image');
+    
+    images.forEach(image => {
+      image.addEventListener('dblclick', () => {
+        image.classList.toggle('zoomed');
+      });
+    });
+    document.addEventListener('contextmenu', event=> event.preventDefault()); 
+      document.onkeydown = function(e) { 
+      if(event.keyCode == 123) { 
+      return false; 
+      } 
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.keyCode == 'P'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+      return false; 
+      } 
+      } 
+  </script>
+</body>
+</html>
