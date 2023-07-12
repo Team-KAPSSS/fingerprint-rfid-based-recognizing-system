@@ -1,186 +1,261 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>FINGERPRINT AND RFID BASED RECOGNIZING SYSTEM</title>
-  <style>
-    body{
-    margin:0;
-    padding:0;
+<!DOCTYPE html> 
+ <html> 
+ <head> 
+   <title>FINGERPRINT AND RFID BASED RECOGNIZING SYSTEM</title> 
+   <style> 
+     body{ 
+     margin:0; 
+     padding:0; 
+     display: grid; 
+     grid-template-rows: auto 1fr auto; 
+     min-height: 100vh;
+ } 
+     .logo{ 
+         display: flex; 
+         flex-direction: column; 
+         align-items: center; 
+     } 
+     .logo a{ 
+       text-decoration: none; 
+       display: flex; 
+       flex-direction: column; 
+         align-items: center;       
+     } 
+     .logo img{ 
+         height: 160px; 
+         width: 160px; 
+         margin-top: 50px; 
+       border: 2px solid lightgrey; 
+       border-radius: 15px; 
+     } 
+     h1{ 
+         color: rgb(190, 190, 190); 
+         text-align: center; 
+         -webkit-text-stroke-width:0.8px; 
+         -webkit-text-stroke-color:rgb(55, 55, 55); 
+     } 
+     .navbar{ 
+       display: flex; 
+       justify-content: space-around; 
+       margin: 15px; 
+  
+     } 
+     a{ 
+       text-decoration: none; 
+       color: black; 
+     } 
+     a:hover{ 
+       color: blue; 
+     } 
+     .main{
+       padding: 20px;
+       padding-top: 50px;
+     }
+     .chose{
+       display: flex;
+       justify-content: space-around;
+     }
+     button{
+       background-color: lightgrey; 
+  border: none;
+  color: black;
+  padding: 5px 3px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+     }
+     button:hover{
+       background-color: lightcoral;
+     }
+     #pb{
+       background-color: lightgreen;
+       padding: 15px 25px;
+     }
+     #vb{
+       padding: 15px 25px;
+     }
+  #picture{
+    display:block;
 }
-    .logo{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .logo a{
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-        align-items: center;      
-    }
-    .logo img{
-        height: 160px;
-        width: 160px;
-        margin-top: 50px;
-      border: 2px solid lightgrey;
-      border-radius: 15px;
-    }
-    h1{
-        color: rgb(190, 190, 190);
-        text-align: center;
-        -webkit-text-stroke-width:0.8px;
-        -webkit-text-stroke-color:rgb(55, 55, 55);
-    }
-    .navbar{
-      height: 25px;
-      display: flex;
-      
-      justify-content: space-around;
-      margin-bottom: 15px;
-
-    }
-    .navbar div{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 35px;
-      width: 22%;
-      font-size: 25px;
-      border-radius: 5px;
-      background-color: lightgray;
-    }
-    .navbar div:hover{
-      background-color: lightcoral;
-    }
-    a{
-      text-decoration: none;
-      color: black;
-    }
-    a:hover{
-      color: blue;
-    }
-    .gallery {
-      display: flex;
-  flex-wrap: wrap;
-
-    }
-
-    .image-container {
-      height:fit-content;
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-      margin: 10px;
-      font-size: 30px;
-
-    }
-    
-    .image {
-      width: 100%;
-      height: auto;
-      align-content: flex-end;
-      transition: transform 0.3s ease-in-out;
-
-    }
-    
-    .image:hover {
-      transform: scale(1.1);
-    }
-    
-    .image-description {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
-      background-color: lightslategrey;
-      color: #fff;
-      padding: 10px;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out;
-
-    }
-    
-    .image-container:hover .image-description {
-      opacity: 1;
-    }
-
-
-
-    h5{
-      margin: 0;
-      background-color: rgb(205, 205, 205);
-      text-align: center;
-      height: 40px;
-      font-size: 30px;
-      
-      
-    }
-  </style>
-</head>
-<body>
-    <div class="logo">
-      <a href="index.html">
-      <img src="logo.jpg" alt="" >
+#videos{
+  display:none;
+}
+     .gallery { 
+       display: flex; 
+   flex-wrap: wrap; 
+  
+     } 
+  
+     .image-container { 
+       height:fit-content; 
+       width: 100%; 
+       position: relative; 
+       overflow: hidden; 
+       margin: 10px; 
+       font-size: 30px; 
+  
+     } 
+  
+     .image { 
+       width: 100%; 
+       height: auto; 
+       align-content: flex-end; 
+       transition: transform 0.3s ease-in-out; 
+  
+     } 
+  
+     .image:hover { 
+       transform: scale(1.1); 
+     } 
+  
+     .image-description { 
+       position: absolute; 
+       bottom: 0; 
+       left: 0; 
+       width: 100%; 
+       text-align: center; 
+       background-color: lightslategrey; 
+       color: #fff; 
+       padding: 10px; 
+       opacity: 0; 
+       transition: opacity 0.3s ease-in-out; 
+  
+     } 
+  
+     .image-container:hover .image-description { 
+       opacity: 1; 
+     } 
+  
+  
+  
+     h5{ 
+       margin: 0; 
+       background-color: rgb(205, 205, 205); 
+       text-align: center; 
+       height: 40px; 
+       font-size: 30px; 
+  
+  
+     } 
+   </style> 
+ </head> 
+ <body> 
+ <header>
+     <div class="logo"> 
+       <a href="index.html"> 
+       <img src="logo.jpg" alt="" > 
     <h1>Team KAPSSS</h1>
-  </a>
-  </div>
-<div class="navbar">
-  <div><a href="about.html">About</a></div>
-  <div><a href="projectdetails.html">Project Details</a></div>
-  <div><a href="teammembers.html">Team Members</a></div>
-  <div><a href="futurescope.html">Future Scope</a></div>
+   </a> 
+   </div> 
+ <div class="navbar"> 
+   <div><a href="about.html"><button>About</button></a></div> 
+   <div><a href="projectdetails.html"><button>Project Details</button></a></div> 
+   <div><a href="teammembers.html"><button>Team Members</button></a></div> 
+   <div><a href="futurescope.html"><button>Future Scope</button></a></div> 
+ </div> 
+ </header>
+ <div class="main">
+ <center><h2>Project images and videos</h2>
+</center>
+<div class="chose">
+  <div><button id="pb" onclick="pic()">Photos</button></div>
+  <div><button id="vb" onclick="vdo()">videos</button></div>
 </div>
-  <div class="gallery">
-    <div class="image-container">
-      <img class="image" src="teamkapsss.jpg" alt="Image 1">
-      <div class="image-description">Team KAPSSS</div>
-    </div>
-    <div class="image-container">
-      <img class="image" src="image1.png" alt="Image 2">
-      <div class="image-description">Team work</div>
-    </div>
-    
-    <div class="image-container">
-      <img class="image" src="image2.jpg" alt="Image 3">
-      <div class="image-description">Half build the project</div>
-    </div>
-    
-    <div class="image-container">
-      <img class="image" src="image3.jpg" alt="Image 4">
-      <div class="image-description">Project building complete</div>
-    </div>
 
-    <!-- Add more image containers as needed -->
 
-  </div>
-  <h5>created by Suman Gorai</h5>
-  <script>
-    const images = document.querySelectorAll('.image');
-    
-    images.forEach(image => {
-      image.addEventListener('dblclick', () => {
-        image.classList.toggle('zoomed');
-      });
-    });
-    document.addEventListener('contextmenu', event=> event.preventDefault()); 
-      document.onkeydown = function(e) { 
-      if(event.keyCode == 123) { 
-      return false; 
-      } 
-      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
-      return false; 
-      } 
-      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
-      return false; 
-      } 
-      if(e.ctrlKey && e.keyCode == 'P'.charCodeAt(0)){ 
-      return false; 
-      } 
-      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
-      return false; 
-      } 
-      } 
-  </script>
-</body>
-</html>
+<div id="picture">
+   <div class="gallery"> 
+     <div class="image-container"> 
+       <img class="image" src="teamkapsss.jpg" alt="Image 1"> 
+       <div class="image-description">Team KAPSSS</div> 
+     </div> 
+     <div class="image-container"> 
+       <img class="image" src="image1.png" alt="Image 2"> 
+       <div class="image-description">Team work</div> 
+     </div> 
+  
+     <div class="image-container"> 
+       <img class="image" src="image2.jpg" alt="Image 3"> 
+       <div class="image-description">Half build the project</div> 
+     </div> 
+  
+     <div class="image-container"> 
+       <img class="image" src="image3.jpg" alt="Image 4"> 
+       <div class="image-description">Project building complete</div> 
+     </div> 
+     <!-- Add more image containers as needed --> 
+   </div> 
+   </div> 
+   <div id="videos">
+     videos here
+   </div>
+   </div>
+   <footer>
+   <h5>created by Suman Gorai</h5> 
+   </footer>
+   <script>
+            function pic() {
+  var x = document.getElementById("picture");
+ var y = document.getElementById("videos");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none";
+    document.getElementById("pb").style.backgroundColor = "lightgreen";
+    document.getElementById("vb").style.backgroundColor = "lightgrey";
+  } else {
+    x.style.display = "none";
+    y.style.display = "none";
+document.getElementById("pb").style.backgroundColor = "lightgrey";
+document.getElementById("vb").style.backgroundColor = "lightgrey";
+  }
+}
+  function vdo() {
+  var x = document.getElementById("picture");
+  var y = document.getElementById("videos");
+  if (y.style.display === "none") {
+    y.style.display = "block";
+    x.style.display = "none";
+    document.getElementById("pb").style.backgroundColor = "lightgrey";
+    document.getElementById("vb").style.backgroundColor = "lightgreen";
+  } else {
+    x.style.display = "none";
+    y.style.display = "none";
+    document.getElementById("pb").style.backgroundColor = "lightgrey";
+    document.getElementById("vb").style.backgroundColor = "lightgrey";
+  }
+}
+     const images = document.querySelectorAll('.image'); 
+  
+     images.forEach(image => { 
+       image.addEventListener('dblclick', () => { 
+         image.classList.toggle('zoomed'); 
+       }); 
+     }); 
+     
+
+
+     document.addEventListener('contextmenu', event=> event.preventDefault());  
+       document.onkeydown = function(e) {  
+       if(event.keyCode == 123) {  
+       return false;  
+       }  
+       if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){  
+       return false;  
+       }  
+       if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){  
+       return false;  
+       }  
+       if(e.ctrlKey && e.keyCode == 'P'.charCodeAt(0)){  
+       return false;  
+       }  
+       if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){  
+       return false;  
+       }  
+       }  
+
+   </script> 
+ </body> 
+ </html>
