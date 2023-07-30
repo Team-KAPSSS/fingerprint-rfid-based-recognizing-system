@@ -34,7 +34,7 @@
          -webkit-text-stroke-width:0.8px; 
          -webkit-text-stroke-color:rgb(55, 55, 55); 
      } 
-      .navbar{ 
+         .navbar{ 
        height: 25px; 
        display: flex; 
        flex-direction: ; 
@@ -74,7 +74,7 @@
   border: none;
   color: black;
   padding: 5px 3px;
-  margin:10px;
+  margin: 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -82,7 +82,10 @@
   border-radius: 5px;
   cursor: pointer;
      }
-     button:hover{
+     #pb:hover{
+       background-color: lightcoral;
+     }
+     #vb:hover{
        background-color: lightcoral;
      }
      #pb{
@@ -115,6 +118,14 @@
      } 
   
      .image { 
+       width: 100%; 
+       height: auto; 
+       align-content: flex-end; 
+       transition: transform 0.3s ease-in-out; 
+  
+     } 
+       
+     .video { 
        width: 100%; 
        height: auto; 
        align-content: flex-end; 
@@ -166,7 +177,7 @@
    </a> 
    </div> 
  <div class="navbar"> 
-   <div><a href="about.html">About</a></div>
+   <div><a href="about.html">About</a></div> 
    <div><a href="projectdetails.html">Project Details</a></div> 
    <div><a href="teammembers.html">Team Members</a></div> 
    <div><a href="futurescope.html">Future Scope</a></div> 
@@ -205,24 +216,35 @@
    </div> 
    </div> 
    <div id="videos">
-     videos here
+        <div class="gallery"> 
+     <div class="image-container"> 
+       <video class="video" controls>
+  <source src="uploading.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<div>
+  &nbsp
+</div>
+       <div class="image-description" >Uploading final code</div> 
+     </div> 
+     </div>
    </div>
    </div>
    <footer>
-   <h5>Developed by Suman Gorai</h5> 
+   <h5>created by Suman Gorai</h5> 
    </footer>
    <script>
             function pic() {
   var x = document.getElementById("picture");
  var y = document.getElementById("videos");
-  if (x.style.display === "none") {
+  if (x.style.display == "none") {
     x.style.display = "block";
     y.style.display = "none";
     document.getElementById("pb").style.backgroundColor = "lightgreen";
     document.getElementById("vb").style.backgroundColor = "lightgrey";
-  } else {
+  } 
+  else {
     x.style.display = "none";
-    y.style.display = "none";
 document.getElementById("pb").style.backgroundColor = "lightgrey";
 document.getElementById("vb").style.backgroundColor = "lightgrey";
   }
@@ -230,13 +252,12 @@ document.getElementById("vb").style.backgroundColor = "lightgrey";
   function vdo() {
   var x = document.getElementById("picture");
   var y = document.getElementById("videos");
-  if (y.style.display === "none") {
+  if (y.style.display == "none") {
     y.style.display = "block";
     x.style.display = "none";
     document.getElementById("pb").style.backgroundColor = "lightgrey";
     document.getElementById("vb").style.backgroundColor = "lightgreen";
   } else {
-    x.style.display = "none";
     y.style.display = "none";
     document.getElementById("pb").style.backgroundColor = "lightgrey";
     document.getElementById("vb").style.backgroundColor = "lightgrey";
@@ -260,7 +281,8 @@ document.getElementById("vb").style.backgroundColor = "lightgrey";
        if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){  
        return false;  
        }  
-       if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){  
+       if(e.ctrlKey && e
+ .shiftKey && e.keyCode == 'J'.charCodeAt(0)){  
        return false;  
        }  
        if(e.ctrlKey && e.keyCode == 'P'.charCodeAt(0)){  
