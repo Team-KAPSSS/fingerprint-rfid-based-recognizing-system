@@ -252,15 +252,15 @@ document.getElementById("vb").style.backgroundColor = "lightgrey";
   function vdo() {
   var x = document.getElementById("picture");
   var y = document.getElementById("videos");
-  if (y.style.display == "none") {
-    y.style.display = "block";
+  if (y.style.display == "block") {
+   y.style.display = "none";
+    document.getElementById("pb").style.backgroundColor = "lightgrey";
+    document.getElementById("vb").style.backgroundColor = "lightgrey";
+  } else {
+     y.style.display = "block";
     x.style.display = "none";
     document.getElementById("pb").style.backgroundColor = "lightgrey";
     document.getElementById("vb").style.backgroundColor = "lightgreen";
-  } else {
-    y.style.display = "none";
-    document.getElementById("pb").style.backgroundColor = "lightgrey";
-    document.getElementById("vb").style.backgroundColor = "lightgrey";
   }
 }
      const images = document.querySelectorAll('.image'); 
