@@ -1,0 +1,228 @@
+<!DOCTYPE html> 
+ <html> 
+ <head> 
+   <title>PROJECT DETAILS</title> 
+   <style> 
+     body{ 
+       margin:0; 
+         padding:0; 
+         display: grid; 
+         grid-template-rows: auto 1fr auto; 
+         min-height: 100vh; 
+     } 
+     .logo{ 
+       margin-top: 50px; 
+         display: flex; 
+         flex-direction: column; 
+         align-items: center; 
+     } 
+     .logo a{ 
+       text-decoration: none; 
+       display: flex; 
+         flex-direction: column; 
+         align-items: center; 
+     } 
+     .logo img{ 
+         height: 160px; 
+         width: 160px; 
+         margin: 0px; 
+       border: 2px solid lightgrey; 
+       border-radius: 15px; 
+     } 
+     h1{ 
+         color: rgb(190, 190, 190); 
+         text-align: center; 
+         -webkit-text-stroke-width:0.8px; 
+         -webkit-text-stroke-color:rgb(55, 55, 55); 
+     } 
+     .navbar{ 
+       height: 25px; 
+       display: flex; 
+       justify-content: space-around; 
+       margin-bottom: 15px; 
+  
+     } 
+     .navbar div{ 
+       display: flex; 
+       justify-content: center; 
+       align-items: center; 
+       height: 35px; 
+       width: 22%; 
+       font-size: 25px; 
+       border-radius: 5px; 
+       background-color: lightgray; 
+     } 
+     .navbar div:hover{ 
+       background-color: lightcoral; 
+     } 
+     a{ 
+       text-decoration: none; 
+       color: black; 
+     } 
+     a:hover{ 
+       color: blue; 
+     } 
+  .cards {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 98vh;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.profile-card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin: 10px;
+    height:300px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: block;
+}
+
+.profile-card h2 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.profile-card p {
+    color: #888;
+    margin: 5px 0;
+}
+button{
+       background-color: lightgrey; 
+  border: none;
+  color: black;
+  padding: 10px 6px;
+  margin: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+     }
+     button:hover{
+       background-color: lightcoral;
+     }
+
+.profile-card:hover {
+    transform: translateY(-10px);
+}
+     .bottom{ 
+         width: 100%; 
+     } 
+     h5{ 
+       margin:0; 
+       background-color: rgb(205, 205, 205); 
+       text-align: center; 
+       height: 40px; 
+       font-size: 30px; 
+     } 
+ </style> 
+ </head> 
+ <body> 
+   <header> 
+     <div class="logo"> 
+       <a href="index.html"> 
+         <img src="logo.jpg" alt="" > 
+       <h1>Team KAPSSS</h1> 
+     </a> 
+   </div> 
+ <div class="navbar"> 
+     <div><a href="about.html">About</a></div> 
+     <div><a href="projectdetails.html">Project Details</a></div> 
+     <div style="background-color: lightgreen;"><a href="teammembers.html">Team Members</a></div> 
+     <div><a href="futurescope.html">Future Scope</a></div> 
+ </div> 
+ </header> 
+ <div class="cards">
+    <div class="profile-card">
+        <img src="kartick.jpg" alt="Profile Picture">
+        <h2>Kartick Ghosh</h2>
+        <p>Electronics Engineer</p>
+        <a href="https://docs.google.com/document/d/1GY2Qhx47EH5Pzl4u-Z70Cyh_ik89O7YQ/edit?usp=drivesdk&ouid=105491476942939162231&rtpof=true&sd=true"><button>download resume</button></a>
+    </div>
+    <div class="profile-card">
+        <img src="avijit.jpg" alt="Profile Picture">
+        <h2>Avijit Chatterjee</h2>
+        <p>Electronics Engineer</p>
+        <a href="https://drive.google.com/file/d/1G3Tn6SAbZ18DMQj-DCnXHoweb0Rld1Ai/view?usp=drivesdk"><button>download resume</button></a>
+    </div>
+    <div class="profile-card">
+        <img src="payel.jpg" alt="Profile Picture">
+        <h2>Payel Dutta</h2>
+        <p>Electronics Engineer</p>
+        <a href="#"><button>download resume</button></a>
+    </div>
+    <div class="profile-card">
+        <img src="sapta.jpg" alt="Profile Picture">
+        <h2>Saptaswa Kanti Maity</h2>
+        <p>Electronics Engineer</p>
+        <a href="https://drive.google.com/file/d/1GK-G73FePEYBhSgRW0WJn-6ZJ8gHBRcr/view?usp=drivesdk"><button>download resume</button></a>
+    </div>
+    <div class="profile-card">
+        <img src="sudipta.jpg" alt="Profile Picture">
+        <h2>Sudipta Dey Karmakar</h2>
+        <p>Electronics Engineer</p>
+        <a href="https://drive.google.com/file/d/1Fp8HkAPZVDbAzvtVkeDuyH6qJuy4nizI/view?usp=drivesdk"><button>download resume</button></a>
+    </div>
+    <div class="profile-card">
+        <img src="suman.jpg" alt="Profile Picture">
+        <h2>Suman Gorai</h2>
+        <p>Electronics Engineer</p>
+        <a href="https://docs.google.com/document/d/1GNO5oj14mML0CNUfVqy0djWv2mwsjBIY/edit?usp=drivesdk&ouid=105491476942939162231&rtpof=true&sd=true"><button>download resume</button></a>
+    </div>
+    </div>
+ 
+  
+ <footer class="bottom"> 
+ <h5>Developed by Suman Gorai</h5> 
+ </footer> 
+  
+   <script> 
+     const images = document.querySelectorAll('.image'); 
+  
+     images.forEach(image => { 
+       image.addEventListener('dblclick', () => { 
+         image.classList.toggle('zoomed'); 
+       }); 
+     }); 
+     document.addEventListener('contextmenu', event=> event.preventDefault());  
+       document.onkeydown = function(e) {  
+       if(event.keyCode == 123) {  
+       return false;  
+       }  
+       if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){  
+       return false;  
+       }  
+       if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){  
+       return false;  
+       }  
+       if(e.ctrlKey && e.keyCode == 'P'.charCodeAt(0)){  
+       return false;  
+       }  
+       if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){  
+       return false;  
+       }  
+       }  
+   </script> 
+ </body> 
+ </html>
