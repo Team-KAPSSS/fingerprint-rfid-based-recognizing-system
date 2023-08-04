@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>About</title>
+  <style>
+    body{
+      margin:0;
+        padding:0;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+    }
+    .logo{
+      margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo a{
+      text-decoration: none;
+      display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo img{
+        height: 160px;
+        width: 160px;
+        margin: 0px;
+      border: 2px solid lightgrey;
+      border-radius: 15px;
+    }
+    h1{
+        color: rgb(190, 190, 190);
+        text-align: center;
+        -webkit-text-stroke-width:0.8px;
+        -webkit-text-stroke-color:rgb(55, 55, 55);
+    }
+    .navbar{
+      height: 25px;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 15px;
+
+    }
+    .navbar div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 35px;
+      width: 22%;
+      font-size: 25px;
+      border-radius: 5px;
+      background-color: lightgray;
+    }
+    .navbar div:hover{
+      background-color: lightcoral;
+    }
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    a:hover{
+      color: blue;
+    }
+
+    .about{
+      margin-top: 30px;
+    }
+    .about h2{
+        text-align: center;
+    }
+    .data{
+      padding: 20px;
+      font-size: 18px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .bottom{
+        width: 100%;
+    }
+    h5{
+      margin:0;
+      background-color: rgb(205, 205, 205);
+      text-align: center;
+      height: 40px;
+      font-size: 30px;
+    }
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.jpg" alt="" >
+      <h1>Team KAPSSS</h1>
+    </a>
+  </div>
+<div class="navbar">
+    <div><a href="about.html">About</a></div>
+    <div style=" background-color: lightgreen;"><a href="projectdetails.html">Project Details</a></div>
+    <div><a href="teammembers.html">Team Members</a></div>
+    <div><a href="futurescope.html">Future Scope</a></div>
+</div>
+</header>
+
+<div class="about">
+<h2>
+  About Team KAPSSS
+</h2>
+<div class="data">
+<p>
+  <b>Team KAPSSS</b> was founder by <b>Saptaswa Kanti Maity</b> in 19/12/2022.The word <b>KAPSSS</b> represents the members of this team.Our honourable trachers and fellow friends motivated us to build a project.We have done our best to fulfill all the requirements to the project.
+</p>
+<p>
+  Every Team member has a specific task which they heve tried by their best.The given
+  tasks are-
+  
+  </p>
+  
+ <h3>Idea & Creative thinking:</h3>
+<p>Saptaswa Kanti Maity</p>
+<p>Suman Gorai</p>
+<p>Avijit Chatterjee</p>
+
+<h3>Team Leading & Management:</h3>
+Saptaswa Kanti Maity
+<h3>Software building and coding:</h3>
+<p>Suman Gorai</p>
+<p>Saptaswa Kanti Maity</p>
+<h3>Circuit Designing:</h3>
+Kartick Ghosh
+<h3>Hardware implementation:</h3>
+<p>Saptaswa Kanti Maity</p>
+<p>Suman Gorai</p>
+<p>Kartik Ghosh</p>
+<p>Avijit Chatterjee</p>
+<h3>Website Development:</h3>
+<p>Suman Gorai</p>
+<h3>Project Documentation:</h3>
+<p>Kartick Ghosh</p>
+<p>Avijit Chatterjee</p>
+<p>Payel Dutta</p>
+<p>Suman Gorai</p>
+<p>Sudipta Dey Karmakar</p>
+<p>Saptaswa Kanti Maity</p>
+<h3>Research & Development:</h3>
+<p>Team KAPSSS</p>
+
+</div> 
+</div>
+
+<footer class="bottom">
+<h5>Developed by Team KAPSSS</h5>
+</footer>
+
+  <script>
+    const images = document.querySelectorAll('.image');
+    
+    images.forEach(image => {
+      image.addEventListener('dblclick', () => {
+        image.classList.toggle('zoomed');
+      });
+    });
+    document.addEventListener('contextmenu', event=> event.preventDefault()); 
+      document.onkeydown = function(e) { 
+      if(event.keyCode == 123) { 
+      return false; 
+      } 
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.keyCode == 'P'.charCodeAt(0)){ 
+      return false; 
+      } 
+      if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){ 
+      return false; 
+      } 
+      } 
+  </script>
+</body>
+</html>
